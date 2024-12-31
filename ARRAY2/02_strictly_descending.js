@@ -14,26 +14,6 @@ function isStrictlyDescending(numbers) {
   return true;
 }
 
-// ----------------------------------- testing section 
-function getMark(expected, actual) {
-  return expected === actual ? "✅" : "❌";
-}
-
-function generateMesage(array1, actual, expected) {
-  const mark = getMark(expected, actual);
-  const inputpart = "\n inputs:" + array1;
-  const expectedPart = "\n expected to be:" + expected;
-  const actualPart = "\n actual is:" + actual;
-
-  return mark + inputpart + expectedPart + actualPart + "\n";
-}
-
-function testIsStrictlyDescending(array1, expected) {
-  const actual = isStrictlyDescending(array1);
-
-  console.log(generateMesage(array1, actual, expected));
-}
-
 function testAll() {
   testIsStrictlyDescending([], true);
   testIsStrictlyDescending([1], true);
